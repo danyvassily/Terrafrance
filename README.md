@@ -44,6 +44,3 @@ Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou à
 
 Dany Vassiliakos
 
-## Licence
-
-Ce projet est sous licence [insérez le type de licence ici].
