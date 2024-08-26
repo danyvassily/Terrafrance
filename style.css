@@ -1,0 +1,288 @@
+:root {
+  --primary-color: #F0F0F0;
+  --secondary-color: #faeeee;
+  --text-color: #000;
+  --font-family: 'Jacques Francois', serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  background-size: cover;
+  background-position: center;
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Navbar section */
+header {
+  margin: 2rem 1rem;
+  padding: 0 1rem;
+}
+
+nav.navbar {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  border-radius: 26px;
+  box-shadow: 0 0 20px 5px rgba(105, 99, 99, 0.2);
+}
+
+.navbar .terralogo {
+  height: 40px;
+}
+
+.navbar .item1 {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.navbar .item {
+  max-width: 10rem;
+  padding: 5px;
+  font-size: 0.9rem;
+}
+
+.navbar .img-profil {
+  height: 40px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  nav.navbar {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .navbar .item,
+  .navbar .item1 {
+    font-size: 0.8rem;
+  }
+
+  .navbar .item {
+    order: 1;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+main {
+  padding: 2rem 1rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.hero .kira {
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 24px;
+  box-shadow: 0 0 50px 10px rgba(73, 121, 95, 0.3);
+}
+
+h1, h2 {
+  margin: 1rem 0;
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+}
+
+.branding2 {
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center;
+  background-image: linear-gradient(to left bottom, #42bd86, #4fca78, #66d763, #85e246, #a8eb12);
+  border-radius: 12px;
+  max-width: 1000px;
+}
+
+.product-grid,
+.produits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.product-grid article,
+.produits-grid article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.product-grid article h3,
+.produits-grid article h3 {
+  margin-bottom: 1rem;
+}
+
+.Pro1,
+.pro3 {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.produit-description {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .product-grid,
+  .produits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .branding2 {
+    margin: 2rem 1rem;
+    padding: 1rem;
+  }
+}
+
+img {
+  border-radius: 10px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.product-grid img, .produits-grid img {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+  background-image: linear-gradient(to bottom, #cecece, #969696, #626262, #323232, #000000);
+  padding: 3rem 1rem;
+  color: var(--secondary-color);
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 50px;
+}
+
+.footer .footer-left,
+.footer .footer-center,
+.footer .footer-right {
+  display: inline-block;
+  vertical-align: top;
+  width: 33%;
+}
+
+.footer .icons {
+  margin-top: 25px;
+}
+
+.footer .icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+.footer .footer-center i {
+  background-color: #494f53;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer .footer-center p a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer .menu {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer .menu a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer .menu a:hover {
+  color: #000000;
+}
+
+.lolo {
+  border-radius: 6px;
+  margin-top: 4rem;
+  max-width: 80%;
+  max-height: 15rem;
+  background-color: rgb(173, 169, 140);
+  justify-content: space-between;
+  gap: 4px;
+  text-align: center;
+}
+
+#location {
+  width: 100%;
+  font-size: 8px;
+  text-align: right;
+}
